@@ -22,6 +22,7 @@
 
 
 <style>
+
 a:link {
   color: #e85338;
   background-color: transparent;
@@ -122,6 +123,36 @@ a:active {
   text-align: center
 }
 </style>
+<style>
+#content img {
+  border-radius: 50%;
+}
+</style>
+
+
+<style>
+
+#content figcaption {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  text-shadow: none;
+  color: black;
+  text-align: center;
+  height: auto;
+}
+</style>
+
+<style>
+
+figcaption {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  text-shadow: none;
+  color: black;
+  text-align: center;
+  height: auto;
+}
+</style>
 </head>
 
 <body>
@@ -134,7 +165,8 @@ a:active {
     <div class="container">
 		<ul class="nav navbar-nav">
               <li><a href="./index.html">Home</a></li>
-              <li><a href="./Planted_Forest.html">Planted Forest</a></li>
+              <li><a href="./Projects.html">Projects</a></li>
+              <li><a href="./Planted_Forest.html">Random Planted Forest</a></li>
  		</ul>
 	  </div>
 	  </nav>
@@ -151,22 +183,48 @@ a:active {
     
                 <!-- Entries Column -->
           <div class="col-md-8">   <!-- style="height: 100vh;"> -->
-          <div style="margin-top:10%; text-align:justify;">                
+                               <h2 id="pub">StructuredML</h2> 
+
+          <div style="margin-top:7%; text-align:justify;">    
+
              <p style="font-family:Helvetica Neue;font-size: 14px">
-       Structured Machine learning (StructuredML) is a new class of interpretable Machine Learning Algorithms <br> <br>
-              </p>
-           <!--   <h3 id="pub">News</h3> 
-              <p style="font-family:Helvetica Neue;font-size: 14px">
-              </p> -->
-    
+                          
+           We work on  interpretable machine learning algorithms that potentially combine accuracy and intelligibility.<br> 
+           <figure>
+           <img src="model5.jpg" alt= "image1"  height="180">
+           <figcaption>Illustration of a random planted forest showing excellent performance in the detection of jumps.</figcaption>
+           </figure>
+           <br> 
+            
+            <h4>Team</h4> 
+            <div id="content">
+                <ul class="list-unstyled list-inline text-center">
+                   <li>
+                       <img src="joseph.jpg" alt= "image1"  height="120">
+                          <figcaption> <a href="https://stat.math.uni-heidelberg.de/people_detail.php?id=238" target=_blank> Joseph Meyer</a> <br> PhD Student <br> Heidelberg University</figcaption>
+                   </li>
+                   <li>
+                      <img src="munir.jpg" alt= "image2" height="120">
+                         <figcaption><a href="https://www.maths.usyd.edu.au/u/munir/" target=_blank> Munir Hiabu </a><br> Lecturer <br> University of Sydney</figcaption>
+                   </li>
+                   <li>
+                      <img src="mammen.jpg" alt= "image3"  height="120">
+                        <figcaption><a href="https://www.math.uni-heidelberg.de/stat/mammen/" target=_blank> Enno Mammen</a> <br> Professor <br> Heidelberg University</figcaption>
+                  </li>
+                </ul>
+            </div>
+
+
          </div>
           </div>
 
            <div class="col-md-4">   <!-- style="height: 100vh;"> -->
             <h3 id="pub">News</h3> 
+            <p></p><hr><p>
           <div style="margin-top:10%; text-align:justify;">                
              <p style="font-family:Helvetica Neue;font-size: 14px">
-       Random Planted Forest paper and code is now available <br> <br>
+       22/12/2020: Random Planted Forest paper and code is now available  <a href="" target=_blank>[arxiv]</a> 
+            <a href="https://github.com/StructuredML/Planted_Forest" target=_blank>[github] <br>
               </p>
            <!--   <h3 id="pub">News</h3> 
               <p style="font-family:Helvetica Neue;font-size: 14px">
@@ -184,98 +242,6 @@ a:active {
 
 
 
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
-
-
-
-<script>
-filterSelection("all")
-function filterSelection2(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv2");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer2");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
 
 
 </html>
